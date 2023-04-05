@@ -152,7 +152,6 @@ header {
 main {
 	background-image: url("../img/stars-small.jpg");
 	animation: rotate 150s linear infinite;
-	
 
 	.mainContainer {
 		display: flex;
@@ -192,16 +191,62 @@ main {
 				margin: 2em 0;
 			}
 
-			.earth {
+			.planetContainer {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				text-align: justify;
+
+				.mercury {
+					background-image: url("../img/mercury.jpg");
+					box-shadow: 0px 0px 25px 10px #333333;
+				}
+
+                .venus {
+                    background-image: url("../img/venus_surface.jpg");
+                    box-shadow: 0px 0px 25px 10px #563b15;
+                }
+
+				.earth {
+					background-image: url("../img/earth2.jpg");
+					box-shadow: 0px 0px 25px 10px #152b56;
+				}
+
+				.mars {
+					background-image: url("../img/mars.jpg");
+					box-shadow: 0px 0px 25px 10px #562d15;
+				}
+
+				.jupiter {
+					background-image: url("../img/jupiter.jpg");
+					box-shadow: 0px 0px 25px 10px #3d2415;
+				}
+
+				.saturn {
+					background-image: url("../img/saturn.jpg");
+					box-shadow: 0px 0px 25px 10px #3c3c3c;
+				}
+
+				.uranus {
+					background-image: url("../img/uranus.jpg");
+					box-shadow: 0px 0px 25px 10px #515151;
+				}
+
+				.neptun {
+					background-image: url("../img/neptune.jpg");
+					box-shadow: 0px 0px 25px 10px #121645;
+				}
+			}
+
+			.planet {
 				width: 200px;
 				height: 200px;
-				background-image: url("../img/earth2.jpg");
 				background-size: cover;
 				background-repeat: repeat-x;
 				filter: brightness(0.9);
 				animation: rotate 45s linear infinite forwards;
 				border-radius: 50%;
-				box-shadow: 0px 0px 25px 10px #152b56;
 			}
 
 			@keyframes rotate {
