@@ -150,27 +150,67 @@ header {
 }
 
 main {
+	background-image: url("../img/stars-small.jpg");
+	animation: rotate 150s linear infinite;
+	
+
 	.mainContainer {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-        margin: 0 1.2em;
+		margin: 0 1.2em;
 
 		.solarSystem {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
-            text-align: justify;
+			text-align: justify;
 
-            h2{
-                padding: 1.5em;
-            }
+			h2 {
+				padding: 1.5em;
+			}
 
 			img {
-                margin-bottom: 2.5em;
+				margin-bottom: 2.5em;
 				width: 100%;
+			}
+		}
+
+		.planetsSection {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: 0 1.2em;
+			text-align: justify;
+
+			h2,
+			h3,
+			p {
+				margin: 2em 0;
+			}
+
+			.earth {
+				width: 200px;
+				height: 200px;
+				background-image: url("../img/earth2.jpg");
+				background-size: cover;
+				background-repeat: repeat-x;
+				filter: brightness(0.9);
+				animation: rotate 45s linear infinite forwards;
+				border-radius: 50%;
+				box-shadow: 0px 0px 25px 10px #152b56;
+			}
+
+			@keyframes rotate {
+				0% {
+					background-position: 120% 0;
+				}
+				100% {
+					background-position: -70% 0;
+				}
 			}
 		}
 	}
