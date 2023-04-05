@@ -1,0 +1,13 @@
+@use "./reset" as *;
+@use "./colors" as *;
+
+body {
+	background-color: $black;
+	color: $white;
+}
+
+nav{
+    height: 60px;
+    width: 100%;
+    background-color: $white;
+}
