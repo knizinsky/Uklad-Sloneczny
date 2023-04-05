@@ -28,23 +28,23 @@
 
             <div class="hiddenMenu">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#uklad-sloneczny">Układ słoneczny</a></li>
-                    <li><a href="#planety">Planety</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li class="hiddenMenu__link"><a href="#home">Home</a></li>
+                    <li class="hiddenMenu__link"><a href="#uklad-sloneczny">Układ słoneczny</a></li>
+                    <li class="hiddenMenu__link"><a href="#planety">Planety</a></li>
+                    <li class="hiddenMenu__link"><a href="#kontakt">Kontakt</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header>
+    <header id="home">
         <div class="hero">
             <div class="headerContainer">
                 <h1>Układ słoneczny</h1>
-                <button class="btn">Zobacz!</button>
+                <a href="#uklad-sloneczny" class="btn">Zobacz!</a>
             </div>
         </div>
     </header>
-    <main>
+    <main id="uklad-sloneczny">
         <div class="mainContainer">
             <section class="solarSystem">
                 <h2>Układ Słoneczny</h2>
@@ -58,7 +58,7 @@
                     Kuipera z setkami tysięcy obiektów.</p>
             </section>
 
-            <section class="planetsSection">
+            <section class="planetsSection" id="planety">
                 <h2>Planety</h2>
                 <p>W Układzie Słonecznym istnieje oficjalna definicja planety, zgodnie z którą musi ona spełniać trzy
                     kryteria: krążyć wokół Słońca, mieć dostatecznie dużą masę, by uzyskać kształt równowagi
@@ -121,7 +121,26 @@
             </section>
         </div>
     </main>
-    <footer></footer>
+    <footer id="kontakt">
+        <h2>Kontakt</h2>
+        <div class="footerContainer">
+            <form action="mail.php" method="post" class="contactForm">
+                <div class="contactBox">
+                    <label for="name">Imię:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="contactBox">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="contactBox">
+                    <label for="msg">Wiadomość:</label>
+                    <textarea type="msg" id="msg" name="msg" required></textarea>
+                </div>
+                <button class="btnSubmit">Wyślij</button>
+            </form>
+        </div>
+    </footer>
     <script src="./dist/js/script.min.js"></script>
 </body>
 
