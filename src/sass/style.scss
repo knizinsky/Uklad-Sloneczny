@@ -117,7 +117,7 @@ header {
 	.hero {
 		width: 100%;
 		height: calc(100vh - 65px);
-		background-image: url("../img/earth-big.jpg");
+		background-image: url("../../dist/img/earth-big.jpg");
 		background-position: center;
 		background-size: cover;
 
@@ -168,7 +168,7 @@ header {
 }
 
 main {
-	background-image: url("../img/stars-small.jpg");
+	background-image: url("../../dist/img/stars-small.jpg");
 	background-attachment: fixed;
 	animation: rotate 150s linear infinite;
 
@@ -181,7 +181,7 @@ main {
 		line-height: 1.5;
 
 		.solarSystemContainer {
-			background-image: url("../img/stars-gc06d52729_1920.jpg");
+			background-image: url("../../dist/img/stars-gc06d52729_1920.jpg");
 			background-size: cover;
 			background-position: center;
 			background-attachment: fixed;
@@ -283,42 +283,42 @@ main {
 					text-align: center;
 
 					.mercury {
-						background-image: url("../img/mercury.jpg");
+						background-image: url("../../dist/img/mercury.jpg");
 						box-shadow: 0px 0px 25px 10px #333333;
 					}
 
 					.venus {
-						background-image: url("../img/venus_surface.jpg");
+						background-image: url("../../dist/img/venus_surface.jpg");
 						box-shadow: 0px 0px 25px 10px #563b15;
 					}
 
 					.earth {
-						background-image: url("../img/earth2.jpg");
+						background-image: url("../../dist/img/earth2.jpg");
 						box-shadow: 0px 0px 25px 10px #152b56;
 					}
 
 					.mars {
-						background-image: url("../img/mars.jpg");
+						background-image: url("../../dist/img/mars.jpg");
 						box-shadow: 0px 0px 25px 10px #562d15;
 					}
 
 					.jupiter {
-						background-image: url("../img/jupiter.jpg");
+						background-image: url("../../dist/img/jupiter.jpg");
 						box-shadow: 0px 0px 25px 10px #3d2415;
 					}
 
 					.saturn {
-						background-image: url("../img/saturn.jpg");
+						background-image: url("../../dist/img/saturn.jpg");
 						box-shadow: 0px 0px 25px 10px #3c3c3c;
 					}
 
 					.uranus {
-						background-image: url("../img/uranus.jpg");
+						background-image: url("../../dist/img/uranus.jpg");
 						box-shadow: 0px 0px 25px 10px #414141;
 					}
 
 					.neptun {
-						background-image: url("../img/neptune.jpg");
+						background-image: url("../../dist/img/neptune.jpg");
 						box-shadow: 0px 0px 25px 10px #121645;
 					}
 				}
