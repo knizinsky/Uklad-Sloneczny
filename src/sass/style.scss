@@ -137,9 +137,9 @@ header {
 				background-color: #fff;
 				font-size: 2rem;
 				text-transform: uppercase;
-                cursor: pointer;
-                color: $black;
-            }
+				cursor: pointer;
+				color: $black;
+			}
 		}
 	}
 
@@ -164,7 +164,8 @@ main {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		margin: 0 1.2em;
+		margin: 0 2.2em;
+		line-height: 1.5;
 
 		.solarSystem {
 			display: flex;
@@ -172,14 +173,19 @@ main {
 			align-items: center;
 			flex-direction: column;
 			text-align: justify;
+			max-width: 900px;
 
 			h2 {
 				padding: 1.5em;
 			}
 
-			img {
+			.solarSystemImg {
 				margin-bottom: 2.5em;
 				width: 100%;
+				max-width: 500px;
+				float: left;
+				margin: 2em;
+				float: right;
 			}
 		}
 
@@ -188,60 +194,69 @@ main {
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
-			margin: 0 1.2em;
 			text-align: justify;
 
 			h2,
 			h3,
 			p {
 				margin: 2em 0;
+				max-width: 900px;
+				text-align: center;
 			}
 
-			.planetContainer {
+			.allPlanetsContainer {
 				display: flex;
 				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-				text-align: justify;
+				flex-wrap: wrap;
 
-				.mercury {
-					background-image: url("../img/mercury.jpg");
-					box-shadow: 0px 0px 25px 10px #333333;
-				}
+				.planetContainer {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					text-align: justify;
+					max-width: 600px;
+					text-align: center;
 
-				.venus {
-					background-image: url("../img/venus_surface.jpg");
-					box-shadow: 0px 0px 25px 10px #563b15;
-				}
+					.mercury {
+						background-image: url("../img/mercury.jpg");
+						box-shadow: 0px 0px 25px 10px #333333;
+					}
 
-				.earth {
-					background-image: url("../img/earth2.jpg");
-					box-shadow: 0px 0px 25px 10px #152b56;
-				}
+					.venus {
+						background-image: url("../img/venus_surface.jpg");
+						box-shadow: 0px 0px 25px 10px #563b15;
+					}
 
-				.mars {
-					background-image: url("../img/mars.jpg");
-					box-shadow: 0px 0px 25px 10px #562d15;
-				}
+					.earth {
+						background-image: url("../img/earth2.jpg");
+						box-shadow: 0px 0px 25px 10px #152b56;
+					}
 
-				.jupiter {
-					background-image: url("../img/jupiter.jpg");
-					box-shadow: 0px 0px 25px 10px #3d2415;
-				}
+					.mars {
+						background-image: url("../img/mars.jpg");
+						box-shadow: 0px 0px 25px 10px #562d15;
+					}
 
-				.saturn {
-					background-image: url("../img/saturn.jpg");
-					box-shadow: 0px 0px 25px 10px #3c3c3c;
-				}
+					.jupiter {
+						background-image: url("../img/jupiter.jpg");
+						box-shadow: 0px 0px 25px 10px #3d2415;
+					}
 
-				.uranus {
-					background-image: url("../img/uranus.jpg");
-					box-shadow: 0px 0px 25px 10px #414141;
-				}
+					.saturn {
+						background-image: url("../img/saturn.jpg");
+						box-shadow: 0px 0px 25px 10px #3c3c3c;
+					}
 
-				.neptun {
-					background-image: url("../img/neptune.jpg");
-					box-shadow: 0px 0px 25px 10px #121645;
+					.uranus {
+						background-image: url("../img/uranus.jpg");
+						box-shadow: 0px 0px 25px 10px #414141;
+					}
+
+					.neptun {
+						background-image: url("../img/neptune.jpg");
+						box-shadow: 0px 0px 25px 10px #121645;
+					}
 				}
 			}
 
@@ -268,14 +283,21 @@ main {
 }
 
 footer {
+	display: flex;
+	justify-content: center;
 	background-color: $black;
 	margin: 0 1.2em;
-    padding-bottom: 2em;
+	padding-bottom: 2em;
 
-    h2{
-        text-align: center;
-        margin-top: 2em;
-    }
+	.footerContainer {
+		width: 100%;
+		max-width: 500px;
+	}
+
+	h2 {
+		text-align: center;
+		margin-top: 2em;
+	}
 
 	.contactBox {
 		display: flex;
@@ -304,6 +326,26 @@ footer {
 		background-color: #fff;
 		letter-spacing: 2px;
 		text-transform: uppercase;
-        width: 100%;
+		width: 100%;
+	}
+}
+
+@media (width > 768px) {
+	main {
+		.mainContainer {
+			.solarSystem {
+				flex-direction: row;
+			}
+
+			.planetsSection {
+				h2,
+				h3,
+				p {
+					margin: 2em 3em;
+					max-width: 900px;
+					text-align: center;
+				}
+			}
+		}
 	}
 }
