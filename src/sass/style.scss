@@ -157,6 +157,7 @@ header {
 
 main {
 	background-image: url("../img/stars-small.jpg");
+	background-attachment: fixed;
 	animation: rotate 150s linear infinite;
 
 	.mainContainer {
@@ -167,25 +168,61 @@ main {
 		margin: 0 2.2em;
 		line-height: 1.5;
 
-		.solarSystem {
+		.solarSystemContainer{
+			background-image: url('../img/stars-gc06d52729_1920.jpg');
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			// background-color: $black;
+			width: 100vw;
 			display: flex;
-			justify-content: center;
-			align-items: center;
 			flex-direction: column;
-			text-align: justify;
-			max-width: 900px;
+			align-items: center;
+			border-top: 1px solid rgb(34, 34, 34);
+				border-bottom: 1px solid rgb(33, 33, 33);
 
-			h2 {
-				padding: 1.5em;
+			h2{
+				position:absolute;
+				margin-top: 2em;
 			}
 
-			.solarSystemImg {
-				margin-bottom: 2.5em;
-				width: 100%;
-				max-width: 500px;
-				float: left;
-				margin: 2em;
-				float: right;
+			.solarSystem {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				text-align: justify;
+				max-width: 1200px;
+
+				&__firstHalf{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 50%;
+					// background-color: $black;
+				}
+
+				&__secondHalf{
+					width: 50%;
+					height: 100%;
+
+					p{
+						margin: 2em;
+					}
+				}
+	
+				h2 {
+					padding: 1.5em;
+				}
+	
+				.solarSystemImg {
+					margin: 9em 0 7em;
+					width: 100%;
+					max-width: 500px;
+					// padding: 9em 0 0;
+					box-shadow: 2px 2px 2px black;
+					border: 1px solid black;
+				}
 			}
 		}
 
@@ -195,6 +232,20 @@ main {
 			align-items: center;
 			flex-direction: column;
 			text-align: justify;
+
+			.planetsTextContainer{
+				background-color: $black;
+				color: $white;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100vw;
+				border-bottom: 1px solid rgb(33, 33, 33);
+
+				h2{
+					margin: 1em 0 0;
+				}
+			}
 
 			h2,
 			h3,
@@ -208,6 +259,7 @@ main {
 				display: flex;
 				justify-content: center;
 				flex-wrap: wrap;
+				border-bottom: 1px solid rgb(33, 33, 33);
 
 				.planetContainer {
 					display: flex;
@@ -333,8 +385,10 @@ footer {
 @media (width > 768px) {
 	main {
 		.mainContainer {
-			.solarSystem {
-				flex-direction: row;
+			.solarSystemContainer{
+				.solarSystem {
+					flex-direction: row;
+				}
 			}
 
 			.planetsSection {
