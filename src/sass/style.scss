@@ -15,7 +15,8 @@ html {
 nav {
 	height: 65px;
 	width: 100%;
-	background-color: $white;
+	// background-color: rgba(255, 255, 255, 0.178);
+	backdrop-filter: blur(20px);
 	position: fixed;
 	top: 0;
 	z-index: 100;
@@ -27,7 +28,7 @@ nav {
 		justify-content: space-around;
 
 		.logoContainer {
-			color: $black;
+			color: $white;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -51,9 +52,13 @@ nav {
 				width: 40px;
 				height: 3px;
 				border-radius: 2px;
-				background-color: $black;
+				background-color: $white;
 				transition: 0.1s;
 			}
+		}
+
+		.desktopMenu {
+			display: none;
 		}
 
 		.line2--active {
@@ -79,7 +84,8 @@ nav {
 			justify-content: center;
 			align-items: center;
 			font-size: 1.9rem;
-			background-color: $white;
+			background-color: rgba(3, 3, 3, 0.856);
+			backdrop-filter: blur(5px);
 			transition: 0.3s;
 			z-index: 10;
 
@@ -95,7 +101,7 @@ nav {
 					padding: 0.2em;
 
 					a {
-						color: $black;
+						color: $white;
 					}
 				}
 			}
@@ -127,6 +133,7 @@ header {
 			z-index: 1;
 
 			h1 {
+				text-shadow: 0 0 5px goldenrod;
 				font-size: 4rem;
 				margin-bottom: 1.5em;
 				animation: showUp 3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -141,8 +148,9 @@ header {
 				cursor: pointer;
 				color: $white;
 				border: 2px solid rgba(255, 255, 255, 0.753);
-				background-image: url('../img/space-g21d00fdeb_1280.jpg');
+				// background-image: url('../img/space-g21d00fdeb_1280.jpg');
 				animation: rotateDown 150s linear infinite;
+				backdrop-filter: blur(25px);
 			}
 		}
 	}
@@ -339,7 +347,7 @@ main {
 }
 
 @keyframes rotateDown {
-	0%{
+	0% {
 		background-position: 0 120%;
 	}
 
@@ -348,17 +356,16 @@ main {
 	}
 }
 
-@keyframes showUp{
-	0%{
+@keyframes showUp {
+	0% {
 		opacity: 0;
-		transform:scale(1.3);
+		transform: scale(1.3);
 	}
-	100%{
+	100% {
 		opacity: 1;
 		transform: scale(1);
 	}
 }
-
 
 footer {
 	display: flex;
@@ -409,6 +416,31 @@ footer {
 }
 
 @media (width > 768px) {
+	nav {
+		.navWrapper {
+			.burger {
+				display: none;
+			}
+
+			.desktopMenu {
+				display: block;
+
+				ul {
+					display: flex;
+					list-style: none;
+
+					li {
+						margin: 0 2em;
+
+						a {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	main {
 		.mainContainer {
 			.solarSystemContainer {
