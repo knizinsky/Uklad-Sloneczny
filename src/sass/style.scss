@@ -168,8 +168,8 @@ main {
 		margin: 0 2.2em;
 		line-height: 1.5;
 
-		.solarSystemContainer{
-			background-image: url('../img/stars-gc06d52729_1920.jpg');
+		.solarSystemContainer {
+			background-image: url("../img/stars-gc06d52729_1920.jpg");
 			background-size: cover;
 			background-position: center;
 			background-attachment: fixed;
@@ -179,10 +179,10 @@ main {
 			flex-direction: column;
 			align-items: center;
 			border-top: 1px solid rgb(34, 34, 34);
-				border-bottom: 1px solid rgb(33, 33, 33);
+			border-bottom: 1px solid rgb(33, 33, 33);
 
-			h2{
-				position:absolute;
+			h2 {
+				position: absolute;
 				margin-top: 2em;
 			}
 
@@ -194,29 +194,29 @@ main {
 				text-align: justify;
 				max-width: 1200px;
 
-				&__firstHalf{
+				&__firstHalf {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 50%;
+					width: 75%;
 					// background-color: $black;
 				}
 
-				&__secondHalf{
-					width: 50%;
+				&__secondHalf {
+					// width: 85%;
 					height: 100%;
 
-					p{
+					p {
 						margin: 2em;
 					}
 				}
-	
+
 				h2 {
 					padding: 1.5em;
 				}
-	
+
 				.solarSystemImg {
-					margin: 9em 0 7em;
+					margin: 9em 0 2em;
 					width: 100%;
 					max-width: 500px;
 					// padding: 9em 0 0;
@@ -233,7 +233,7 @@ main {
 			flex-direction: column;
 			text-align: justify;
 
-			.planetsTextContainer{
+			.planetsTextContainer {
 				background-color: $black;
 				color: $white;
 				display: flex;
@@ -242,7 +242,7 @@ main {
 				width: 100vw;
 				border-bottom: 1px solid rgb(33, 33, 33);
 
-				h2{
+				h2 {
 					margin: 1em 0 0;
 				}
 			}
@@ -251,8 +251,8 @@ main {
 			h3,
 			p {
 				margin: 2em 0;
-				max-width: 900px;
-				text-align: center;
+				max-width: 85%;
+				text-align: justify;
 			}
 
 			.allPlanetsContainer {
@@ -385,9 +385,20 @@ footer {
 @media (width > 768px) {
 	main {
 		.mainContainer {
-			.solarSystemContainer{
+			.solarSystemContainer {
 				.solarSystem {
 					flex-direction: row;
+
+					&__firstHalf {
+						width: 50%;
+					}
+					&__secondHalf {
+						width: 50%;
+					}
+
+					.solarSystemImg {
+						margin: 9em 0 7em;
+					}
 				}
 			}
 
